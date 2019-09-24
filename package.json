@@ -2,7 +2,7 @@
   "name": "@appunto/ejabberd-api-client",
   "version": "0.0.1",
   "description": "NodeJS ejabberd REST API client",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
     "test": "cd dev && ./start-ejabberd.sh && cd .. && mocha -w --recursive"
   },
