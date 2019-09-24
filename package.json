@@ -1,6 +1,6 @@
 {
   "name": "@appunto/ejabberd-api-client",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "NodeJS ejabberd REST API client",
   "main": "src/index.js",
   "scripts": {
