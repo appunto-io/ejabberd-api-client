@@ -17,4 +17,5 @@ fi
 
 
 docker build -t ejabberd-tdd-server .
-docker run -it -d --name ejabberd-tdd-server-instance -p 15443:5443 ejabberd-tdd-server
+docker run -it -d --name ejabberd-tdd-server-instance -p 15443:5443 -p 15280:5280 -p 5222:5222 ejabberd-tdd-server
+# docker exec -it ejabberd-tdd-server-instance bin/ejabberdctl register admin localhost pass
