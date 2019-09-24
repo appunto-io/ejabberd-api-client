@@ -1,0 +1,24 @@
+#!/usr/bin/env node
+const camelCase = require('lodash.camelcase');
+
+const commands = require('../src/commands.js');
+
+Object.entries(commands)
+  .sort(
+    (a, b) => a[0] < b[0] ? -1 : 1
+  )
+  .forEach(
+    ([name, {arguments = []}]) => {
+      console.log(
+`### \`client.${camelCase(name)}(${arguments.join(', ')})\`
+executes:
+\`\`\`
+POST /api/${name}
+{
+  ${arguments.map(a => `"${a}" : <some_value>`).join(',\n  ')}
+}
+\`\`\`
+`
+      )
+    }
+  )
